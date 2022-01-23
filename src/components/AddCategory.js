@@ -12,10 +12,7 @@ export const AddCategory = ({ setCategories, categories }) => {
     }
 
     const handleSubmit = ( e ) => {
-        //CANCELAR LA RECAGA DE LA PAGINA CUANDO SE SUBMITEA UN FORM
         e.preventDefault();
-
-
         //setCategories([...categories, inputValue]);
 
         //DE ESTA FORMA PODEMOS HACER LO MISMO QUE ARRIBA PERO SIN NECESIDAD DE RECIBIR POR PROPS LAS CATEGORIAS COMO TAL
@@ -24,7 +21,6 @@ export const AddCategory = ({ setCategories, categories }) => {
 
         setCategories( cats => [inputValue, ...cats] );
         setinputValue('');
-        
     }
 
   return (
@@ -32,7 +28,7 @@ export const AddCategory = ({ setCategories, categories }) => {
         <input 
             type='text'
             value={inputValue}
-            //CADA VEZ QUE EL INPUT CAMBIE LLAMARA A LA FUNCION QUE CAMBIA EL ESTADO
+            //CADA VEZ QUE EL INPUT CAMBIE, LLAMARA A LA FUNCION QUE CAMBIA EL ESTADO
             onChange={ handleInputChange }
         />
       </form>

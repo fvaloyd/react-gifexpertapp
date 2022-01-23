@@ -1,5 +1,5 @@
 import React from 'react';
-// import { getGif } from '../helpers/GetGifs';
+
 import { GifGridItem } from './GifGridItem';
 import { useFetchGifs } from '../hooks/useFetchGifs';
 
@@ -39,13 +39,8 @@ export const GifGrid = ({ category }) => {
     //             .catch(err => {
     //                 console.log(err);
     //             })
-    // //EL CATEGORY EN EL ARRAY INDICA QUE SI EL CATEGORY CAMBIA EL USEEFFECT SE EJECUTARA DE NUEVO
+    // //EL CATEGORY EN EL ARRAY INDICA QUE, SI EL CATEGORY CAMBIA, EL USEEFFECT SE EJECUTARA DE NUEVO
     // }, [ category ]);
-
-
-
-
-
 
     // const getGif = async () => {
     //     const url = `https://api.giphy.com/v1/gifs/search?limit=10&q=${ encodeURI(category)  }&api_key=7FmJGB4bmWrmMu80ODg0Gmnpi2X6mxOt`;

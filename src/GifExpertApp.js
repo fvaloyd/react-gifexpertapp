@@ -4,7 +4,6 @@ import { GifGrid } from './components/GifGrid';
 
 const GifExpertApp = () => {
 
-    //const categories = ['One punch', 'Samurai x', 'Dragon Ball'];
     const [categories, setCategories] = useState(['One Piece']);
 
     // const handleAdd = () => {
@@ -25,19 +24,17 @@ const GifExpertApp = () => {
             <AddCategory setCategories={ setCategories } categories={ categories } />
             <hr />
 
-            {/* <button onClick={ handleAdd } >agregar</button> */}
-
             {
-                //DE ESTA FORMA PODEMOS ITERAR Y RENDERIZAR ELEMENTOS EN EL COMPONENTE
-                //NO PODEMOS USAR BUCLES NORMALES YA QUE POR DEFECTOS ESTOS NO RETORNAN NADA
+                //DE ESTA FORMA PODEMOS ITERAR Y RENDERIZAR ELEMENTOS EN EL COMPONENTE.
+                //NO PODEMOS USAR BUCLES NORMALES, YA QUE POR DEFECTOS ESTOS NO RETORNAN NADA,
                 //EN CAMBIO EL METODO MAP SI
                 categories.map( category => {
                     return <GifGrid 
                                 key={ category }
                                 category={ category } 
                             />
-                    //EL KEY EN LA ETIQUETA ES CASI OBLIGATORIO EN ESTE TIPO DE CASO
-                    //YA QUE ES LO QUE NOS VA A SERVIR PARA IDENTIFICAR UN ELEMENTO DE OTRO
+                    //EL KEY EN LA ETIQUETA ES CASI OBLIGATORIO EN ESTE TIPO DE CASO,
+                    //YA QUE ES LO QUE NOS VA A SERVIR PARA IDENTIFICAR UN ELEMENTO DE OTRO,
                     //NORMALMENTE ESTA KEY SERA EL ID DEL ELEMENTO DE LA BASE DE DATOS O ALGO ASI
                 })
             }

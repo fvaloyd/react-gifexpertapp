@@ -15,7 +15,3 @@ export const getGif = async ( category ) => {
     return gifs;
     //EL ASYNC DEL METODO HARA QUE ESTE RETURN SEA UNA PROMESA.
 }
-
-// export{
-//     getGif
-// }
